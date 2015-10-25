@@ -35,8 +35,12 @@
 	#include <ws2tcpip.h>
 	#include <stdio.h>
 	#pragma comment(lib, "Ws2_32.lib")
-#elif _LINUX
+#elif __linux__
 	#include <sys/socket.h>
+	#include <sys/socket.h>
+	#include <netinet/in.h>
+	#include <netdb.h>
+	#include <arpa/inet.h>
 #elif __FreeBSD__
     #include <sys/socket.h>
     #include <netinet/in.h>
